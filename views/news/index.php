@@ -16,21 +16,23 @@ Description: A two-column fixed-width template suitable for small websites.
 <title>Culinary by Free Css Templates</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link href="http://localhost/PHP/Zi_project/template/default.css" rel="stylesheet" type="text/css" />
+<link href="./template/default.css" rel="stylesheet" type="text/css" /> 
 </head>
 <body>
+  <!--
 <div id="wrapper">
   <div id="header">
     <div id="logo">
       <h1><a href="#">Culinary</a></h1>
-      <h2><a href="http://www.freecsstemplates.org/">Template By Free CSS Templates</a></h2>
+-->
+      <h2><a href="http://www.freecsstemplates.org/">Template By Free CSS Templates</a></h2>     
     </div>
     <!-- end div#logo -->
   </div>
   <!-- end div#header -->
   <div id="menu">
     <ul>
-      <li class="active"><a href="http://localhost/PHP/Zi_project/news/<?php echo $newsItem['id'];?>">Home</a></li>
+      <li class="active"><a href="./news/<?php echo $newsItem['id'];?>">Home</a></li>
       <li><a href="#">Products</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
@@ -43,13 +45,13 @@ Description: A two-column fixed-width template suitable for small websites.
           
         <?php foreach ($newsList as $newsItem):?>  
         <div class="post">
-          <h2 class="title"><a href="http://localhost/PHP/Zi_project/news/<?php echo $newsItem['id'];?>"><?php echo $newsItem['title'];?>"</a></h2>
+          <h2 class="title"><a href="./news/<?php echo $newsItem['id'];?>"><?php echo $newsItem['title'];?>"</a></h2>
           <p class="byline"><?php echo $newsItem['date'];?>s</p>
           <div class="entry">
             <p><?php echo $newsItem['short_content'];?></p>
           </div>
           <div class="meta">
-            <p class="links"><a href="http://localhost/PHP/Zi_project/news/<?php echo $newsItem['id'];?>" class="comments">Comments (32)</a></p>
+            <p class="links"><a href="./news/<?php echo $newsItem['id'];?>" class="comments">Comments (32)</a></p>
           </div>
         </div>
           <?php endforeach;?>
