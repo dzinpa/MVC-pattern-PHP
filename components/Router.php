@@ -2,12 +2,10 @@
 /**
  * Takes control from FrontController's index.php
  * Defines the  class controller and action and calls the desired method
- * 
  */
 class Router 
 {
     /**
-     *
      * @var array $routes  store routes
      */
     private $routes;
@@ -30,7 +28,7 @@ class Router
             $str = trim($_SERVER['REQUEST_URI'], '/');
             return substr($str, 15);
             
-            //return trim($_SERVER['REQUEST_URI'], '/'); //or that
+            //return trim($_SERVER['REQUEST_URI'], '/'); //or that if cut nothing
         }
     }
 
@@ -76,7 +74,7 @@ class Router
                 
                 //call function with params-variables
                 $result = call_user_func_array(array (
-                          $controllerObject, $actionName), $parameters);//так передаем параметры в виде переменных
+                          $controllerObject, $actionName), $parameters);
                 if ($result != null) {
                     break;
                 }
