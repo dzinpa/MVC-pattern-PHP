@@ -16,7 +16,7 @@ class News
        if ($id) {
         $db = Db::getConnection();
            
-       $result = $db->query('SELECT * from publication WHERE id=' .$id);
+       $result = $db->query('SELECT * from tableName WHERE id=' .$id);
         //$result->setFetchMode(PDO::FETCH_NUM);
         $result->setFetchMode(PDO::FETCH_ASSOC);
         
@@ -36,8 +36,8 @@ class News
         
         $newslist = array();
         
-        $result = $db->query('SELECT id, title, date, short_content '
-                . 'FROM publication '
+        $result = $db->query('SELECT id, title, date, short_content ' //table cells name
+                . 'FROM tableName '
                 . 'ORDER BY date DESC '
                 . 'LIMIT 10');
         
