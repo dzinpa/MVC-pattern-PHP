@@ -2,9 +2,9 @@
 //Db params
 
 return array(
-            'host' => 'localhost',
-            'dbname' => 'lessons',
-            'user' => 'root',
-            'password' => '',
+            'host' => 'host',
+            'dbname' => 'database name',
+            'user' => 'user name',
+            'password' => 'password',
 );
 
